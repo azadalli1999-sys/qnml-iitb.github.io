@@ -21,6 +21,18 @@
     --rule: #B9C0C7;
     --card-bg: #F6F7F8;
   }
+    .person-meta {
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin: 6px 0 0;
+    line-height: 1.4;
+  }
+  .person-meta .person-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10.5px;
+    color: var(--graphite);
+    margin-right: 4px;
+  }
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -771,64 +783,79 @@
       </div>
     </div>
 
-    <div class="facility-group">
-      <h3>Postdoctoral Researchers</h3>
-      <div class="people-grid">
-        <div class="person">
-          <img class="avatar" src="images/postdoc-ak.jpg" alt="Dr. Veena VP">
-          <h4>Dr. Veena VP</h4>
-          <p class="role">Postdoctoral Researcher</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="facility-group">
-      <h3>PhD Students</h3>
-      <div class="people-grid">
-        <div class="person">
-          <img class="avatar" src="images/phd-jas.jpg" alt="JA Sarkar">
-          <h4>JA Sarkar</h4>
-          <p class="role">PhD Candidate, Year 4</p>
-        </div>
-        <div class="person">
-          <img class="avatar" src="images/phd-aa.jpg" alt="Azad Alli">
-          <h4>Azad Alli</h4>
-          <p class="role">PhD Candidate, Year 2</p>
-        </div>
-        <div class="person">
-          <img class="avatar" src="images/phd-b.jpg" alt="Bhavya Agrawal">
-          <h4>Bhavya Agrawal</h4>
-          <p class="role">PhD Candidate, Year 1</p>
-        </div>
-        <div class="person">
-          <img class="avatar" src="images/phd-rj.jpg" alt="Rituraj Jain">
-          <h4>Rituraj Jain</h4>
-          <p class="role">PhD Candidate, Year 1</p>
-        </div>
-        <div class="person">
-          <img class="avatar" src="images/phd-hs.jpg" alt="Haze Subin">
-          <h4>Haze Subin</h4>
-          <p class="role">PhD Candidate, Year 1</p>
-        </div>
-        <div class="person">
-          <img class="avatar" src="images/phd-hb.jpg" alt="Himanshu Behera">
-          <h4>Himanshu Behera</h4>
-          <p class="role">PhD Candidate, Year 1</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="facility-group">
-      <h3>Master's Students</h3>
-      <div class="people-grid">
-        <div class="person">
-          <div class="avatar">UG</div>
-          <h4>[Student Name]</h4>
-          <p class="role">M.Tech Student</p>
-        </div>
-      </div>
+  <div class="facility-group">
+  <h3>Postdoctoral Researchers</h3>
+  <div class="people-grid">
+    <div class="person">
+      <img class="avatar" src="images/postdoc-ak.jpg" alt="Dr. Veena VP">
+      <h4>Dr. Veena VP</h4>
+      <p class="role">Postdoctoral Researcher</p>
+      <p class="person-meta"><span class="person-label">Ph.D.</span>[Institution, Year]</p>
+      <p class="person-meta"><span class="person-label">Focus</span>[Research field]</p>
     </div>
   </div>
+</div>
+
+<div class="facility-group">
+  <h3>PhD Students</h3>
+  <div class="people-grid">
+    <div class="person">
+      <img class="avatar" src="images/phd-jas.jpg" alt="JA Sarkar">
+      <h4>JA Sarkar</h4>
+      <p class="role">PhD Candidate, Year 4</p>
+      <p class="person-meta"><span class="person-label">B.Tech/M.Sc.</span>[Institution, Year]</p>
+      <p class="person-meta"><span class="person-label">Focus</span>[Research field]</p>
+    </div>
+    <div class="person">
+      <img class="avatar" src="images/phd-aa.jpg" alt="Azad Alli">
+      <h4>Azad Alli</h4>
+      <p class="role">PhD Candidate, Year 2</p>
+      <p class="person-meta"><span class="person-label">B.Tech/M.Sc.</span>[Institution, Year]</p>
+      <p class="person-meta"><span class="person-label">Focus</span>[Research field]</p>
+    </div>
+    <div class="person">
+      <img class="avatar" src="images/phd-b.jpg" alt="Bhavya Agrawal">
+      <h4>Bhavya Agrawal</h4>
+      <p class="role">PhD Candidate, Year 1</p>
+      <p class="person-meta"><span class="person-label">B.Tech/M.Sc.</span>[Institution, Year]</p>
+      <p class="person-meta"><span class="person-label">Focus</span>[Research field]</p>
+    </div>
+    <div class="person">
+      <img class="avatar" src="images/phd-rj.jpg" alt="Rituraj Jain">
+      <h4>Rituraj Jain</h4>
+      <p class="role">PhD Candidate, Year 1</p>
+      <p class="person-meta"><span class="person-label">B.Tech/M.Sc.</span>[Institution, Year]</p>
+      <p class="person-meta"><span class="person-label">Focus</span>[Research field]</p>
+    </div>
+    <div class="person">
+      <img class="avatar" src="images/phd-hs.jpg" alt="Haze Subin">
+      <h4>Haze Subin</h4>
+      <p class="role">PhD Candidate, Year 1</p>
+      <p class="person-meta"><span class="person-label">B.Tech/M.Sc.</span>[Institution, Year]</p>
+      <p class="person-meta"><span class="person-label">Focus</span>[Research field]</p>
+    </div>
+    <div class="person">
+      <img class="avatar" src="images/phd-hb.jpg" alt="Himanshu Behera">
+      <h4>Himanshu Behera</h4>
+      <p class="role">PhD Candidate, Year 1</p>
+      <p class="person-meta"><span class="person-label">B.Tech/M.Sc.</span>[Institution, Year]</p>
+      <p class="person-meta"><span class="person-label">Focus</span>[Research field]</p>
+    </div>
+  </div>
+</div>
+
+<div class="facility-group">
+  <h3>Master's Students</h3>
+  <div class="people-grid">
+    <div class="person">
+      <div class="avatar">UG</div>
+      <h4>[Student Name]</h4>
+      <p class="role">M.Tech Student</p>
+      <p class="person-meta"><span class="person-label">B.Tech</span>[Institution, Year]</p>
+      <p class="person-meta"><span class="person-label">Focus</span>[Research field]</p>
+    </div>
+  </div>
+</div>
 </section>
 
 <section id="alumni">
