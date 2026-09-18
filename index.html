@@ -33,6 +33,19 @@
     color: var(--graphite);
     margin-right: 4px;
   }
+    .brand-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-icon {
+    height: 38px;
+    width: auto;
+  }
+  .iitb-logo {
+    height: 34px;
+    width: auto;
+  }
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -498,8 +511,11 @@
 
 <nav class="top">
   <div class="wrap">
-    <div class="brand">QNML — Quantum Nanomaterial Lab
-      <span class="dept">IIT Bombay — Department of Physics</span>
+    <div class="brand-group">
+      <img class="brand-icon" src="images/qnml-icon.jpg" alt="QNML logo">
+      <div class="brand">QNML — Quantum Nanomaterial Lab
+        <span class="dept">IIT Bombay — Department of Physics</span>
+      </div>
     </div>
     <ul>
       <li><a href="#research">Research</a></li>
@@ -510,6 +526,7 @@
       <li><a href="#publications">Publications</a></li>
       <li><a href="#join">Join</a></li>
     </ul>
+    <img class="iitb-logo" src="images/iitb-logo.jpg" alt="IIT Bombay logo">
   </div>
 </nav>
 
