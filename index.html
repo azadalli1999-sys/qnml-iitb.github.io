@@ -1333,53 +1333,6 @@
   </div>
 </section>
 
-<script>
-  document.getElementById('alumni-more-btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelectorAll('#alumni-list .alumni-extra').forEach(function(el) {
-      el.style.display = 'grid';
-    });
-    document.getElementById('alumni-more-wrap').style.display = 'none';
-  });
-</script>
-<script>
-  const navMoreBtn = document.getElementById('navMoreBtn');
-  const navMoreMenu = document.getElementById('navMoreMenu');
-  navMoreBtn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    const isOpen = navMoreMenu.classList.toggle('open');
-    navMoreBtn.setAttribute('aria-expanded', isOpen);
-  });
-  document.addEventListener('click', function() {
-    navMoreMenu.classList.remove('open');
-    navMoreBtn.setAttribute('aria-expanded', 'false');
-  });
-</script>
-<script>
-  (function() {
-    const slidesEl = document.getElementById('gallerySlides');
-    const slides = slidesEl.children;
-    const dotsEl = document.getElementById('galleryDots');
-    let index = 0;
-
-    for (let i = 0; i < slides.length; i++) {
-      const dot = document.createElement('button');
-      dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
-      dot.addEventListener('click', () => goTo(i));
-      dotsEl.appendChild(dot);
-    }
-
-    function goTo(i) {
-      index = (i + slides.length) % slides.length;
-      slidesEl.style.transform = `translateX(-${index * 100}%)`;
-      Array.from(dotsEl.children).forEach((d, di) => d.classList.toggle('active', di === index));
-    }
-
-    document.getElementById('galleryNext').addEventListener('click', () => goTo(index + 1));
-    document.getElementById('galleryPrev').addEventListener('click', () => goTo(index - 1));
-  })();
-</script>
-
 <section id="publications">
   <div class="wrap">
     <div class="section-head">
@@ -1522,6 +1475,51 @@
     <span>Powai, Mumbai</span>
   </div>
 </footer>
+<script>
+  document.getElementById('alumni-more-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelectorAll('#alumni-list .alumni-extra').forEach(function(el) {
+      el.style.display = 'grid';
+    });
+    document.getElementById('alumni-more-wrap').style.display = 'none';
+  });
+</script>
+<script>
+  const navMoreBtn = document.getElementById('navMoreBtn');
+  const navMoreMenu = document.getElementById('navMoreMenu');
+  navMoreBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    const isOpen = navMoreMenu.classList.toggle('open');
+    navMoreBtn.setAttribute('aria-expanded', isOpen);
+  });
+  document.addEventListener('click', function() {
+    navMoreMenu.classList.remove('open');
+    navMoreBtn.setAttribute('aria-expanded', 'false');
+  });
+</script>
+<script>
+  (function() {
+    const slidesEl = document.getElementById('gallerySlides');
+    const slides = slidesEl.children;
+    const dotsEl = document.getElementById('galleryDots');
+    let index = 0;
 
+    for (let i = 0; i < slides.length; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => goTo(i));
+      dotsEl.appendChild(dot);
+    }
+
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      slidesEl.style.transform = `translateX(-${index * 100}%)`;
+      Array.from(dotsEl.children).forEach((d, di) => d.classList.toggle('active', di === index));
+    }
+
+    document.getElementById('galleryNext').addEventListener('click', () => goTo(index + 1));
+    document.getElementById('galleryPrev').addEventListener('click', () => goTo(index - 1));
+  })();
+</script>
 </body>
 </html>
