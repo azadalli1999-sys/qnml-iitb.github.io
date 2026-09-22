@@ -114,7 +114,7 @@
     padding: 0 32px;
   }
 
-  /* ---------- Nav ---------- */
+   /* ---------- Nav ---------- */
   nav.top {
     position: sticky;
     top: 0;
@@ -124,6 +124,7 @@
     border-bottom: 1px solid var(--rule);
   }
   nav.top .wrap {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -178,7 +179,7 @@
   @media (max-width: 720px) {
     nav.top ul { display: none; }
   }
-    .nav-more { position: relative; }
+
   .nav-more-btn {
     background: none;
     border: none;
@@ -189,7 +190,7 @@
     padding: 4px;
   }
   .nav-more-btn:hover { color: var(--patina); }
-  .nav-more-menu {
+  nav.top .nav-more-menu {
     position: absolute;
     top: calc(100% + 14px);
     right: 0;
@@ -205,7 +206,7 @@
     flex-direction: column;
     z-index: 30;
   }
-  .nav-more-menu.open { display: flex; }
+  nav.top .nav-more-menu.open { display: flex; }
   .nav-more-menu a {
     display: block;
     padding: 9px 18px;
