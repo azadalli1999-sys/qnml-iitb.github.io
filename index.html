@@ -178,6 +178,42 @@
   @media (max-width: 720px) {
     nav.top ul { display: none; }
   }
+    .nav-more { position: relative; }
+  .nav-more-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    padding: 4px;
+  }
+  .nav-more-btn:hover { color: var(--patina); }
+  .nav-more-menu {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 8px 0;
+    min-width: 170px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+    list-style: none;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    z-index: 30;
+  }
+  .nav-more-menu.open { display: flex; }
+  .nav-more-menu a {
+    display: block;
+    padding: 9px 18px;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--ink-soft);
+  }
+  .nav-more-menu a:hover { background: var(--card-bg); color: var(--patina); }
 
   /* ---------- Hero ---------- */
   header.hero {
@@ -624,12 +660,23 @@
       <li><a href="#research">Research</a></li>
       <li><a href="#facilities">Facilities</a></li>
       <li><a href="#news">News</a></li>
-      <li><a href="#people">People</a></li>
-      <li><a href="#alumni">Alumni</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#patents">Patents</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#join">Join</a></li>
+      <li class="nav-more">
+        <button class="nav-more-btn" id="navMoreBtn" aria-haspopup="true" aria-expanded="false" aria-label="More sections">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <line x1="3" y1="6" x2="17" y2="6"/>
+            <line x1="3" y1="10" x2="17" y2="10"/>
+            <line x1="3" y1="14" x2="17" y2="14"/>
+          </svg>
+        </button>
+        <ul class="nav-more-menu" id="navMoreMenu">
+          <li><a href="#people">People</a></li>
+          <li><a href="#alumni">Alumni</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#patents">Patents</a></li>
+          <li><a href="#join">Join</a></li>
+        </ul>
+      </li>
     </ul>
     <img class="iitb-logo" src="images/iitb-logo.jpg" alt="IIT Bombay logo">
   </div>
@@ -1235,6 +1282,19 @@
       el.style.display = 'grid';
     });
     document.getElementById('alumni-more-wrap').style.display = 'none';
+  });
+</script>
+<script>
+  const navMoreBtn = document.getElementById('navMoreBtn');
+  const navMoreMenu = document.getElementById('navMoreMenu');
+  navMoreBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    const isOpen = navMoreMenu.classList.toggle('open');
+    navMoreBtn.setAttribute('aria-expanded', isOpen);
+  });
+  document.addEventListener('click', function() {
+    navMoreMenu.classList.remove('open');
+    navMoreBtn.setAttribute('aria-expanded', 'false');
   });
 </script>
 
